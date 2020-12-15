@@ -1,5 +1,7 @@
 package it.bx.resteasyjackson;
 
+import io.agroal.api.AgroalDataSource;
+import io.quarkus.agroal.DataSource;
 import it.bx.config.HelloConfiguration;
 import lombok.NoArgsConstructor;
 
@@ -19,6 +21,10 @@ public class HelloResource {
 
     @Inject
     HelloConfiguration helloConfiguration;
+
+    @Inject
+    AgroalDataSource defaultSource;
+
 
     @GET
     public String hello(){

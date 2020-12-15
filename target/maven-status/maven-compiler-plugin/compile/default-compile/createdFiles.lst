@@ -1,5 +1,6 @@
-it/cs367/resteasyjackson/MyObjectMapperCustomizer.class
-it/cs367/bean/Fruit.class
-it/cs367/resteasyjackson/HelloResource.class
-it/cs367/config/HelloConfiguration.class
-it/cs367/GreetingResource.class
+it/bx/bean/Fruit.class
+it/bx/GreetingResource.class
+it/bx/resteasyjackson/HelloResource.class
+it/bx/config/HelloConfiguration.class
+it/bx/resteasyjackson/FruitResource.class
+it/bx/resteasyjackson/MyObjectMapperCustomizer.class

@@ -5,19 +5,19 @@
   <groupId>it.cs367</groupId>
   <artifactId>first-quarkus-project</artifactId>
   <version>1.0.0-SNAPSHOT</version>
-
   <properties>
-    <surefire-plugin.version>2.22.1</surefire-plugin.version>
-    <maven.compiler.target>14</maven.compiler.target>
-    <quarkus.platform.version>1.10.3.Final</quarkus.platform.version>
-    <maven.compiler.source>14</maven.compiler.source>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <quarkus.platform.artifact-id>quarkus-universe-bom</quarkus.platform.artifact-id>
-    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <maven.compiler.parameters>true</maven.compiler.parameters>
-    <quarkus-plugin.version>1.10.3.Final</quarkus-plugin.version>
     <compiler-plugin.version>3.8.1</compiler-plugin.version>
+    <maven.compiler.parameters>true</maven.compiler.parameters>
+    <maven.compiler.source>14</maven.compiler.source>
+    <maven.compiler.target>14</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <quarkus-plugin.version>1.10.3.Final</quarkus-plugin.version>
+    <quarkus.platform.artifact-id>quarkus-universe-bom</quarkus.platform.artifact-id>
     <quarkus.platform.group-id>io.quarkus</quarkus.platform.group-id>
+    <quarkus.platform.version>1.10.3.Final</quarkus.platform.version>
+    <surefire-plugin.version>2.22.1</surefire-plugin.version>
+    <version.io.agroal>1.9</version.io.agroal>
   </properties>
   <dependencyManagement>
     <dependencies>
@@ -53,13 +53,45 @@
       <artifactId>rest-assured</artifactId>
       <scope>test</scope>
     </dependency>
-
-
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
       <version>1.18.16</version>
       <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.agroal</groupId>
+      <artifactId>agroal-api</artifactId>
+      <version>${version.io.agroal}</version>
+    </dependency>
+    <dependency>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-agroal</artifactId>
+      <version>1.10.3.Final</version>
+    </dependency>
+    <dependency>
+      <groupId>io.agroal</groupId>
+      <artifactId>agroal-pool</artifactId>
+      <version>${version.io.agroal}</version>
+    </dependency>
+    <dependency>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-smallrye-health</artifactId>
+      <version>1.10.3.Final</version>
+    </dependency>
+    <dependency>
+      <groupId>com.h2database</groupId>
+      <artifactId>h2</artifactId>
+      <version>1.4.200</version>
+    </dependency>
+    <dependency>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-jdbc-h2</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-hibernate-orm</artifactId>
     </dependency>
 
   </dependencies>
@@ -69,10 +101,6 @@
         <groupId>io.quarkus</groupId>
         <artifactId>quarkus-maven-plugin</artifactId>
         <version>${quarkus-plugin.version}</version>
-        <configuration>
-          <source>${maven.compiler.source}</source>
-          <target>${maven.compiler.target}</target>
-        </configuration>
         <extensions>true</extensions>
         <executions>
           <execution>
@@ -83,10 +111,13 @@
             </goals>
           </execution>
         </executions>
+        <configuration>
+          <source>${maven.compiler.source}</source>
+          <target>${maven.compiler.target}</target>
+        </configuration>
       </plugin>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
-        <!--suppress UnresolvedMavenProperty -->
         <version>${compiler-plugin.version}</version>
       </plugin>
       <plugin>
@@ -95,7 +126,6 @@
         <configuration>
           <systemPropertyVariables>
             <java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
-            <!--suppress UnresolvedMavenProperty -->
             <maven.home>${maven.home}</maven.home>
           </systemPropertyVariables>
         </configuration>
@@ -114,7 +144,6 @@
         <plugins>
           <plugin>
             <artifactId>maven-failsafe-plugin</artifactId>
-            <!--suppress UnresolvedMavenProperty -->
             <version>${surefire-plugin.version}</version>
             <executions>
               <execution>
@@ -126,7 +155,6 @@
                   <systemPropertyVariables>
                     <native.image.path>${project.build.directory}/${project.build.finalName}-runner</native.image.path>
                     <java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
-                    <!--suppress UnresolvedMavenProperty -->
                     <maven.home>${maven.home}</maven.home>
                   </systemPropertyVariables>
                 </configuration>

@@ -1,3 +1,29 @@
+# Help command
+
+```shell script
+./mvnw compile quarkus:dev
+```
+
+
+This command is for run and hotdeploy all resources.
+
+
+```shell script
+mvn quarkus:add-extension -Dextensions="jdbc-h2"
+```
+
+Add dependency from h2 remember quarkus-smallrye-health
+for health check of the database for test purpose.
+
+
+
+
+
+
+# Default readme.mc
+
+
+
 # first-quarkus-project project
 
 This project uses Quarkus, the Supersonic Subatomic Java Framework.

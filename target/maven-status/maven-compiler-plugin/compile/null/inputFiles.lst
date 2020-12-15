@@ -1,6 +1,6 @@
-/Users/danielastea/Desktop/WorkSpace/quarkusFirstProject/src/main/java/it/cs367/resteasyjackson/FruitResource.java
-/Users/danielastea/Desktop/WorkSpace/quarkusFirstProject/src/main/java/it/cs367/resteasyjackson/JacksonResource.java
-/Users/danielastea/Desktop/WorkSpace/quarkusFirstProject/src/main/java/it/cs367/resteasyjackson/MyObjectMapperCustomizer.java
-/Users/danielastea/Desktop/WorkSpace/quarkusFirstProject/src/main/java/it/cs367/bean/Fruit.java
-/Users/danielastea/Desktop/WorkSpace/quarkusFirstProject/src/main/java/it/cs367/GreetingResource.java
-/Users/danielastea/Desktop/WorkSpace/quarkusFirstProject/src/main/java/it/cs367/config/RegisterCustomModuleCustomizer.java
+/Users/danielastea/Desktop/WorkSpace/quarkusFirstProject/src/main/java/it/bx/GreetingResource.java
+/Users/danielastea/Desktop/WorkSpace/quarkusFirstProject/src/main/java/it/bx/resteasyjackson/MyObjectMapperCustomizer.java
+/Users/danielastea/Desktop/WorkSpace/quarkusFirstProject/src/main/java/it/bx/bean/Fruit.java
+/Users/danielastea/Desktop/WorkSpace/quarkusFirstProject/src/main/java/it/bx/config/HelloConfiguration.java
+/Users/danielastea/Desktop/WorkSpace/quarkusFirstProject/src/main/java/it/bx/resteasyjackson/FruitResource.java
+/Users/danielastea/Desktop/WorkSpace/quarkusFirstProject/src/main/java/it/bx/resteasyjackson/HelloResource.java
