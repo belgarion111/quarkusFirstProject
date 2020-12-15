@@ -1,4 +1,4 @@
-package it.cs367;
+package it.bx;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;

@@ -1,4 +1,4 @@
-package it.cs367.config;
+package it.bx.config;
 
 
 import io.quarkus.arc.config.ConfigProperties;

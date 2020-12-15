@@ -1,4 +1,4 @@
-package it.cs367.bean;
+package it.bx.bean;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

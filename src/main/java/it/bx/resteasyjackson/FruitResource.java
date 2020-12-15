@@ -1,7 +1,6 @@
-package it.cs367.resteasyjackson;
+package it.bx.resteasyjackson;
 
-import it.cs367.bean.Fruit;
-import lombok.Getter;
+import it.bx.bean.Fruit;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;

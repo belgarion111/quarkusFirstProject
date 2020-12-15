@@ -1,4 +1,4 @@
-package it.cs367;
+package it.bx;
 
 import io.quarkus.test.junit.QuarkusTest;
 import org.junit.jupiter.api.Test;
