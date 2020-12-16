@@ -5,7 +5,7 @@
 ```
 
 
-This command is for run and hotdeploy all resources.
+This command is for run and hot deploy all resources.
 
 
 ```shell script
@@ -13,7 +13,8 @@ mvn quarkus:add-extension -Dextensions="jdbc-h2"
 ```
 
 Add dependency from h2 remember quarkus-smallrye-health
-for health check of the database for test purpose.
+for health check of the database for test purpose see the url
+http://localhost:8080/health/ready
 
 
 
